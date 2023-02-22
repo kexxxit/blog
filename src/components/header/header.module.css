@@ -1,0 +1,14 @@
+.navigation {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+.auth {
+    display: flex;
+    justify-content: flex-end;
+}
