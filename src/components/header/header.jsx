@@ -1,9 +1,10 @@
 import React from "react";
 import styles from './header.module.css'
+import {NavLink} from "react-router-dom";
 
 let Header = () => {
     return (
-        <header>
+        <header className={styles.header}>
             <div className='container'>
                 <div className={styles.navigation}>
                     <div className={styles.nav}>
@@ -11,7 +12,7 @@ let Header = () => {
                         <a>Автор</a>
                     </div>
                     <div className={styles.auth}>
-                        <a>Авторизация</a>
+                        <NavLink to={'/register'}>Авторизация</NavLink>
                     </div>
                 </div>
             </div>

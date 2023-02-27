@@ -16,3 +16,21 @@ code {
 header {
   background-color: cadetblue;
 }
+
+button {
+  height: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.24);
+  background-color: #d9fffb;
+  opacity: 80%;
+  cursor: pointer;
+}
+
+button:hover{
+  opacity: 100%;
+}
+
+textarea {
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.24);
+  padding: 5px;
+}

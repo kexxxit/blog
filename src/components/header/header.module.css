@@ -1,11 +1,17 @@
+
+
 .navigation {
     display: grid;
     grid-template-columns: 4fr 1fr;
+    padding: 10px 0;
 }
 
 .nav {
-    display: flex;
-    justify-content: space-around;
+
+}
+
+.nav a {
+    margin-right: 50px;
 }
 
 .auth {
