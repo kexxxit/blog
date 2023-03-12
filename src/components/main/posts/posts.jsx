@@ -11,10 +11,6 @@ let Posts = (props) => {
                         <div className={styles.post__image}>
                             <img src={post.postImg} alt={'post image'}/>
                         </div>: ''}
-                    <div className={styles.post__footer}>
-                        <span>лайк</span>
-                        <span>комментарии</span>
-                    </div>
                 </div>
             })}
         </div>

@@ -2,18 +2,21 @@ import React from "react";
 import styles from './header.module.css'
 import {NavLink} from "react-router-dom";
 
-let Header = () => {
+let Header = (props) => {
     return (
         <header className={styles.header}>
             <div className='container'>
                 <div className={styles.navigation}>
                     <div className={styles.nav}>
-                        <a>Блог</a>
-                        <a>Автор</a>
+                        <NavLink to={'/'}>Блог</NavLink>
                     </div>
-                    <div className={styles.auth}>
-                        <NavLink to={'/register'}>Авторизация</NavLink>
-                    </div>
+                    { props.isAuth ? <div className={styles.auth}>
+                            <span>{props.email}</span>
+                            <button onClick={props.logout} className={styles.logout__button}>Выйти</button>
+                        </div> :
+                        <div className={styles.auth}>
+                            <NavLink to={'/register'}>Авторизация</NavLink>
+                        </div> }
                 </div>
             </div>
         </header>

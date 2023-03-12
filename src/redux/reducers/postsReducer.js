@@ -1,7 +1,6 @@
 import {postsAPI} from "../../api/api";
 
 const SET_POSTS = 'SET-POSTS'
-const ADD_POST = 'ADD-POST'
 
 let initialState = {
     posts: [
@@ -31,9 +30,7 @@ let initialState = {
 const postsReducer = (state = initialState, action) => {
     switch (action.type) {
         case SET_POSTS:
-            return {...state, posts: action.posts}
-        case ADD_POST:
-            return {...state, posts: action.posts}
+            return {...state, posts: action.posts.reverse()}
         default:
             return state
     }
@@ -48,9 +45,9 @@ export const requestPosts = () => {
     }
 }
 
-export const addPost = (postText) => {
+export const addPost = (postText, postImg) => {
     return async (dispatch) => {
-        await postsAPI.addPosts(postText)
+        await postsAPI.addPosts(postText, postImg)
         let response = await postsAPI.getPosts()
         dispatch(setPosts(response))
     }

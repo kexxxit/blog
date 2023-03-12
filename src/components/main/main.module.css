@@ -1,0 +1,36 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+}
+
+.user {
+    background-color: #9bd8d9;
+    margin-right: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.main {
+    margin-top: 10px;
+}
+
+.avatar {
+    width: 100%;
+}
+
+@media (max-width: 800px) {
+    .wrapper {
+        display: block;
+
+    }
+    .user {
+        margin-right: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .avatar {
+        width: 100px;
+        margin-right: 15px;
+    }
+}

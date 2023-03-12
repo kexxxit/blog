@@ -6,15 +6,12 @@
     padding: 10px 0;
 }
 
-.nav {
-
-}
-
-.nav a {
-    margin-right: 50px;
-}
-
 .auth {
     display: flex;
     justify-content: flex-end;
+}
+
+.logout__button {
+    height: auto;
+    margin-left: 10px;
 }
